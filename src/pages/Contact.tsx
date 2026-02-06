@@ -11,8 +11,9 @@ export default function Contact() {
     message: '',
   });
 
-  const whatsappNumber = '+971501234567';
-  const message = encodeURIComponent('Hello! I would like to make a reservation.');
+  const whatsappNumber = '919398442100';
+  const floatingWhatsAppNumber = '919398442100';
+  const message = encodeURIComponent('Hi Jameer Shaik! I would like to make a Order.');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -74,8 +75,7 @@ export default function Contact() {
                   <div>
                     <h4 className="font-semibold mb-1">Address</h4>
                     <p className="text-muted-foreground">
-                      123 Spice Street, Dubai Marina<br />
-                      Dubai, UAE - 12345
+                      Nellore Rd, Pamuru, Andhra Pradesh, 523108
                     </p>
                   </div>
                 </div>
@@ -87,8 +87,7 @@ export default function Contact() {
                   <div>
                     <h4 className="font-semibold mb-1">Phone</h4>
                     <p className="text-muted-foreground">
-                      +971 50 123 4567<br />
-                      +971 4 123 4567
+                      +91 9398442100
                     </p>
                   </div>
                 </div>
@@ -100,8 +99,7 @@ export default function Contact() {
                   <div>
                     <h4 className="font-semibold mb-1">Email</h4>
                     <p className="text-muted-foreground">
-                      info@arabicbiryani.com<br />
-                      reservations@arabicbiryani.com
+                      shaikjameer486@gmail.com
                     </p>
                   </div>
                 </div>
@@ -113,8 +111,8 @@ export default function Contact() {
                   <div>
                     <h4 className="font-semibold mb-1">Opening Hours</h4>
                     <p className="text-muted-foreground">
-                      Mon - Thu: 11:00 AM - 11:00 PM<br />
-                      Fri - Sun: 11:00 AM - 12:00 AM
+                      Mon - Fri: 07:00 AM - 10:00 PM<br />
+                      Sat - Sun: 07:00 AM - 11:00 PM
                     </p>
                   </div>
                 </div>
@@ -231,6 +229,20 @@ export default function Contact() {
           </motion.div>
         </div>
       </section>
+
+      {/* Floating WhatsApp Button */}
+      <motion.a
+        href={`https://wa.me/${floatingWhatsAppNumber}?text=${message}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors z-50"
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <MessageCircle size={24} />
+      </motion.a>
     </main>
   );
 }

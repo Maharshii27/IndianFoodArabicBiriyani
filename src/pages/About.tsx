@@ -1,21 +1,19 @@
 import { motion } from 'framer-motion';
 import { Award, Users, Clock, MapPin } from 'lucide-react';
-import chefImage from '@/assets/chef.jpg';
-import interiorImage from '@/assets/restaurant-interior.jpg';
+import jameerImage from '@/assets/jameer.png';
 
 const timeline = [
-  { year: '2015', title: 'The Beginning', description: 'Founded in Dubai with a passion for authentic Arabian cuisine' },
-  { year: '2017', title: 'First Expansion', description: 'Opened our second branch due to overwhelming demand' },
-  { year: '2019', title: 'Award Winning', description: 'Recognized as Best Arabic Restaurant in the region' },
-  { year: '2021', title: 'Digital Innovation', description: 'Launched online ordering and delivery services' },
+  { year: '2023', title: 'Digital Innovation', description: 'Launched online ordering and delivery services' },
   { year: '2024', title: 'Growing Strong', description: 'Now serving 10,000+ happy customers monthly' },
+  { year: '2025', title: 'Excellence Continues', description: 'Expanded menu with new authentic dishes and enhanced dining experience' },
+  { year: '2026', title: 'Future Forward', description: 'Introducing AI-powered ordering and sustainable packaging initiatives' },
 ];
 
 const stats = [
-  { icon: Award, value: '15+', label: 'Awards Won' },
-  { icon: Users, value: '50K+', label: 'Happy Customers' },
-  { icon: Clock, value: '10+', label: 'Years Experience' },
-  { icon: MapPin, value: '5', label: 'Branches' },
+  { icon: Award, value: '5+', label: 'Awards Won' },
+  { icon: Users, value: '5K+', label: 'Happy Customers' },
+  { icon: Clock, value: '5+', label: 'Years Experience' },
+  { icon: MapPin, value: '1', label: 'Branch' },
 ];
 
 export default function About() {
@@ -38,11 +36,11 @@ export default function About() {
               </h1>
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Arabic Biryani House was born from a dream to bring together the rich culinary 
-                traditions of Arabia and India. Our founder, Chef Mohammed Al-Rashid, spent 
-                20 years perfecting recipes that honor both heritages.
+                traditions of Arabia and India. Our founder, Jameer Shaik, spent 
+                5 years perfecting recipes that honor both heritages.
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                What started as a small family kitchen in Dubai has grown into a beloved 
+                What started as a small family kitchen in Pamuru, Andhra Pradesh has grown into a beloved 
                 destination for food lovers seeking authentic flavors. Every dish we serve 
                 carries the love, passion, and expertise of generations.
               </p>
@@ -70,13 +68,13 @@ export default function About() {
             >
               <div className="glass-card overflow-hidden">
                 <img
-                  src={interiorImage}
-                  alt="Restaurant Interior"
+                  src={jameerImage}
+                  alt="Jameer Shaik - Founder"
                   className="w-full h-96 object-cover"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 glass-card p-4 hidden md:block">
-                <div className="text-3xl font-bold text-gradient-gold">Since 2015</div>
+                <div className="text-3xl font-bold text-gradient-gold">Since 2023</div>
                 <div className="text-muted-foreground">Serving Excellence</div>
               </div>
             </motion.div>
@@ -96,8 +94,8 @@ export default function About() {
             >
               <div className="glass-card overflow-hidden max-w-md mx-auto">
                 <img
-                  src={chefImage}
-                  alt="Head Chef"
+                  src={jameerImage}
+                  alt="Jameer Shaik - Founder"
                   className="w-full h-[500px] object-cover"
                 />
               </div>
@@ -109,15 +107,14 @@ export default function About() {
               className="order-1 lg:order-2"
             >
               <span className="text-primary text-sm uppercase tracking-widest mb-4 block">
-                Meet Our Chef
+                Meet Our Founder
               </span>
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
-                Chef <span className="text-gradient-gold">Mohammed Al-Rashid</span>
+                Jameer Shaik - Founder & CEO
               </h2>
               <p className="text-muted-foreground mb-4 leading-relaxed">
-                With over 25 years of culinary expertise spanning the royal kitchens of 
-                Saudi Arabia to the bustling streets of Hyderabad, Chef Mohammed brings 
-                an unparalleled understanding of spices and flavors.
+                With over 5 years of culinary expertise and a passion for authentic flavors, 
+                Jameer Shaik brings an unparalleled understanding of spices and traditional cooking methods.
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 His philosophy is simple: use the freshest ingredients, respect traditional 
@@ -129,7 +126,7 @@ export default function About() {
                   "Food is not just about taste—it's about memories, traditions, and bringing 
                   people together. Every biryani I create carries a piece of my soul."
                 </p>
-                <div className="mt-4 text-primary font-semibold">— Chef Mohammed</div>
+                <div className="mt-4 text-primary font-semibold">— Jameer Shaik</div>
               </div>
             </motion.div>
           </div>

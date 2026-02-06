@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <h3 className="font-display text-2xl font-bold text-gradient-gold mb-6">
-              Arabic Biryani House
+              Indian Food Arabic Biryani
             </h3>
             <p className="text-muted-foreground mb-6 leading-relaxed">
               Experience the royal fusion of Arabian spices and Indian culinary traditions. 
@@ -54,15 +54,15 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-muted-foreground">
                 <MapPin size={20} className="text-primary mt-1 flex-shrink-0" />
-                <span>123 Spice Street, Dubai Marina, Dubai, UAE</span>
+                <span>Nellore Rd, Pamuru, Andhra Pradesh, 523108</span>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Phone size={20} className="text-primary flex-shrink-0" />
-                <span>+971 50 123 4567</span>
+                <span>+91 9398442100</span>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Mail size={20} className="text-primary flex-shrink-0" />
-                <span>info@arabicbiryani.com</span>
+                <span>shaikjameer486@gmail.com</span>
               </li>
             </ul>
           </div>
@@ -74,15 +74,15 @@ export default function Footer() {
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Clock size={20} className="text-primary flex-shrink-0" />
                 <div>
-                  <p className="font-medium text-foreground">Mon - Thu</p>
-                  <p>11:00 AM - 11:00 PM</p>
+                  <p className="font-medium text-foreground">Mon - Fri</p>
+                  <p>07:00 AM - 10:00 PM</p>
                 </div>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Clock size={20} className="text-primary flex-shrink-0" />
                 <div>
-                  <p className="font-medium text-foreground">Fri - Sun</p>
-                  <p>11:00 AM - 12:00 AM</p>
+                  <p className="font-medium text-foreground">Sat - Sun</p>
+                  <p>07:00 AM - 11:00 PM</p>
                 </div>
               </li>
             </ul>
@@ -112,7 +112,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-border pt-8 text-center">
           <p className="text-muted-foreground">
-            © {new Date().getFullYear()} Arabic Biryani House. All rights reserved.
+            © {new Date().getFullYear()} Indian Food Arabic Biryani. All rights reserved.
           </p>
         </div>
       </div>

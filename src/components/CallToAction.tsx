@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import { Phone, MessageCircle } from 'lucide-react';
 
 export default function CallToAction() {
-  const whatsappNumber = '+971501234567';
-  const message = encodeURIComponent('Hello! I would like to place an order.');
+  const phoneNumber = 'tel:+919398442100';
+  const whatsappNumber = '919398442100';
+  const message = encodeURIComponent('Hi Jameer Shaik! I would like to place an order.');
 
   return (
     <section className="section-padding relative overflow-hidden">
@@ -30,10 +31,13 @@ export default function CallToAction() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="btn-gold flex items-center justify-center gap-2">
+            <a
+              href={phoneNumber}
+              className="btn-gold flex items-center justify-center gap-2"
+            >
               <Phone size={20} />
               Call to Order
-            </Link>
+            </a>
             <a
               href={`https://wa.me/${whatsappNumber}?text=${message}`}
               target="_blank"

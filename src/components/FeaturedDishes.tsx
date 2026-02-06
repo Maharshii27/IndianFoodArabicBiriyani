@@ -1,45 +1,45 @@
 import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
 import mandiImage from '@/assets/mandi-biryani.jpg';
-import hyderabadiImage from '@/assets/hyderabadi-biryani.jpg';
-import kabsaImage from '@/assets/lamb-kabsa.jpg';
-import shawarmaImage from '@/assets/shawarma-biryani.jpg';
-import familyImage from '@/assets/family-pack.jpg';
+import parotaWithChickenImage from '@/assets/ParotaWithChicken.jpg';
+import kushkaImage from '@/assets/kushka.jpg';
+import specialChickenImage from '@/assets/specialChicken.jpg';
+import dosaWithChickenImage from '@/assets/dosaWithChicken.jpg';
 
 const dishes = [
   {
-    name: 'Arabian Chicken Mandi',
+    name: 'Chicken Dum Biryani',
     description: 'Tender chicken slow-cooked with aromatic Arabian spices and fragrant basmati rice',
-    price: '₹449',
+    price: '₹120',
     image: mandiImage,
     rating: 4.9,
   },
   {
-    name: 'Hyderabadi Dum Biryani',
-    description: 'Classic layered biryani with saffron-infused rice and succulent meat pieces',
-    price: '₹399',
-    image: hyderabadiImage,
+    name: 'Parota with Chicken Curry',
+    description: 'Flaky layered parota served with rich and spicy chicken curry',
+    price: '₹50',
+    image: parotaWithChickenImage,
     rating: 4.8,
   },
   {
-    name: 'Arabic Lamb Kabsa',
-    description: 'Royal lamb pieces on a bed of spiced rice with roasted nuts and raisins',
-    price: '₹599',
-    image: kabsaImage,
+    name: 'Kushka with Chicken',
+    description: 'Aromatic rice cooked with tender chicken and aromatic spices',
+    price: '₹60',
+    image: kushkaImage,
     rating: 4.9,
   },
   {
-    name: 'Chicken Shawarma Biryani',
-    description: 'Fusion of juicy shawarma and aromatic biryani with tahini drizzle',
-    price: '₹429',
-    image: shawarmaImage,
+    name: 'Special Chicken Curry',
+    description: 'Special chicken curry prepared with unique blend of Arabian spices',
+    price: '₹60',
+    image: specialChickenImage,
     rating: 4.7,
   },
   {
-    name: 'Special Family Pack',
-    description: 'Grand feast for 4-6 people with assorted biryanis, sides, and desserts',
-    price: '₹1,499',
-    image: familyImage,
+    name: 'Dosa with Chicken',
+    description: 'Crispy dosa served with flavorful chicken filling and chutney',
+    price: '₹50',
+    image: dosaWithChickenImage,
     rating: 5.0,
   },
 ];

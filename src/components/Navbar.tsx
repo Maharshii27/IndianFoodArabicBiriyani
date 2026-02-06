@@ -33,7 +33,7 @@ export default function Navbar() {
       <div className="container-custom flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <span className="font-display text-2xl md:text-3xl font-bold text-gradient-gold">
-            Arabic Biryani House
+            Indian Food Arabic Biryani
           </span>
         </Link>
 

@@ -4,33 +4,45 @@ import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    name: 'Ahmed Al-Rashid',
+    name: 'Maharshi',
     role: 'Food Blogger',
     content: 'The best Arabic biryani I have ever tasted outside of Dubai! The flavors are authentic and the presentation is stunning. A must-visit for biryani lovers.',
     rating: 5,
   },
   {
-    name: 'Priya Sharma',
+    name: 'Madhav',
     role: 'Regular Customer',
     content: 'My family orders from here every weekend. The Hyderabadi Dum Biryani is absolutely divine. The meat just falls off the bone!',
     rating: 5,
   },
   {
-    name: 'Mohammed Hassan',
+    name: 'Nayab',
     role: 'Corporate Event Manager',
     content: 'We ordered catering for our company event and everyone was impressed. Professional service and exceptional food quality. Highly recommended!',
     rating: 5,
   },
   {
-    name: 'Sarah Khan',
+    name: 'khaja',
     role: 'Food Enthusiast',
     content: 'The Lamb Kabsa transported me back to my grandmother\'s kitchen in Riyadh. Authentic Arabian flavors with a beautiful Indian touch.',
     rating: 5,
   },
   {
-    name: 'Rajesh Patel',
+    name: 'Mahendra',
     role: 'Restaurant Critic',
     content: 'A perfect fusion of Arabian and Indian cuisines. The ambience is luxurious and the staff is incredibly attentive. Five stars!',
+    rating: 5,
+  },
+  {
+    name: 'Ajith',
+    role: 'Food Vlogger',
+    content: 'The Special Chicken Curry is absolutely amazing! Perfect blend of spices and the portion sizes are generous. Worth every penny.',
+    rating: 5,
+  },
+  {
+    name: 'Shiva',
+    role: 'Local Resident',
+    content: 'Finally found authentic Arabic biryani in our area! The quality is consistent and the delivery is always on time. My go-to place!',
     rating: 5,
   },
 ];

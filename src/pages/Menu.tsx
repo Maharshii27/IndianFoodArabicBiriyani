@@ -1,16 +1,26 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Star, ShoppingCart, Phone, MessageCircle } from 'lucide-react';
+import { Star, Phone, MessageCircle } from 'lucide-react';
 import mandiImage from '@/assets/mandi-biryani.jpg';
 import parotaWithChickenImage from '@/assets/ParotaWithChicken.jpg';
 import kushkaImage from '@/assets/kushka.jpg';
 import specialChickenImage from '@/assets/specialChicken.jpg';
 import dosaWithChickenImage from '@/assets/dosaWithChicken.jpg';
+import cococolaImage from '@/assets/cococola.jpg';
+import maazaImage from '@/assets/Maaza.jpg';
+import spriteImage from '@/assets/sprite.jpg';
+import chickenFryImage from '@/assets/chicken Fry.jpg';
+import fishFryImage from '@/assets/Fish Fry.jpg';
+import chickenLolipopImage from '@/assets/Chicken lolipop.jpg';
+import brownButterCakeImage from '@/assets/Brown Butter Cake.jpg';
+import chocolateCakeImage from '@/assets/Chocolate Cake.jpg';
+import mangoCakeImage from '@/assets/Mango Cake.jpg';
+import cheesecakeImage from '@/assets/cheesecake.jpg';
 
 const phoneNumber = 'tel:+919398442100';
 const whatsappNumber = '919398442100';
 
-const categories = ['All', 'Biryani', 'Starters', 'Grills', 'Arabian Specials', 'Desserts', 'Drinks'];
+const categories = ['All', 'Biryani', 'Starters', 'Desserts', 'Drinks'];
 
 const menuItems = [
   // Biryani
@@ -20,25 +30,48 @@ const menuItems = [
   { id: 4, name: 'Special Chicken Curry', description: 'Fusion of juicy shawarma and aromatic biryani with tahini drizzle', price: 60, category: 'Biryani', image: specialChickenImage, rating: 4.7 },
   { id: 5, name: 'Dosa with Chicken', description: 'Grand feast for 4-6 people with assorted biryanis, sides, and desserts', price: 50, category: 'Biryani', image: dosaWithChickenImage, rating: 5.0 },
   // Starters
-  { id: 6, name: 'Hummus Platter', description: 'Creamy chickpea dip with olive oil', price: 199, category: 'Starters', image: mandiImage, rating: 4.6 },
-  { id: 7, name: 'Parota Platter', description: 'Flaky parotas with side dishes', price: 249, category: 'Starters', image: parotaWithChickenImage, rating: 4.7 },
-  { id: 8, name: 'Chicken Kushka', description: 'Tender chicken with aromatic spiced rice', price: 349, category: 'Starters', image: kushkaImage, rating: 4.8 },
-  // Grills
-  { id: 9, name: 'Kushka Special', description: 'Special rice dish with mixed ingredients', price: 899, category: 'Grills', image: kushkaImage, rating: 4.9 },
-  { id: 10, name: 'Special Chicken Grill', description: 'Grilled chicken with special marinade', price: 549, category: 'Grills', image: specialChickenImage, rating: 4.8 },
-  // Arabian Specials
-  { id: 11, name: 'Majboos Rice', description: 'Traditional Qatari spiced rice dish', price: 479, category: 'Arabian Specials', image: mandiImage, rating: 4.7 },
-  { id: 12, name: 'Parota Special', description: 'Special parota dish with unique preparation', price: 359, category: 'Arabian Specials', image: parotaWithChickenImage, rating: 4.6 },
+  { id: 6, name: 'Chicken Fry', description: 'Crispy fried chicken with spices', price: 150, category: 'Starters', image: chickenFryImage, rating: 4.6 },
+  { id: 7, name: 'Fish Fry', description: 'Golden fried fish with herbs', price: 180, category: 'Starters', image: fishFryImage, rating: 4.7 },
+  { id: 8, name: 'Chicken Lolipop', description: 'Tangy chicken lolipop appetizer', price: 160, category: 'Starters', image: chickenLolipopImage, rating: 4.8 },
   // Desserts
-  { id: 13, name: 'Dosa Delight', description: 'Crispy dosa with sweet and savory fillings', price: 199, category: 'Desserts', image: dosaWithChickenImage, rating: 4.9 },
-  { id: 14, name: 'Baklava Assortment', description: 'Layers of phyllo, nuts, and honey', price: 249, category: 'Desserts', image: mandiImage, rating: 4.8 },
+  { id: 13, name: 'Brown Butter Cake', description: 'Rich brown butter cake with caramel notes', price: 60, category: 'Desserts', image: brownButterCakeImage, rating: 4.9 },
+  { id: 14, name: 'Chocolate Cake', description: 'Decadent chocolate cake with layers', price: 80, category: 'Desserts', image: chocolateCakeImage, rating: 4.8 },
+  { id: 18, name: 'Mango Cake', description: 'Fresh mango cream cake', price: 60, category: 'Desserts', image: mangoCakeImage, rating: 4.7 },
+  { id: 19, name: 'Cheesecake', description: 'Classic creamy cheesecake', price: 50, category: 'Desserts', image: cheesecakeImage, rating: 4.9 },
   // Drinks
-  { id: 15, name: 'Parota Coffee', description: 'Traditional coffee served with parota', price: 99, category: 'Drinks', image: parotaWithChickenImage, rating: 4.7 },
-  { id: 16, name: 'Kushka Drink', description: 'Refreshing beverage with kushka flavors', price: 79, category: 'Drinks', image: kushkaImage, rating: 4.6 },
+  { id: 15, name: 'Coca Cola', description: 'Refreshing cola drink', price: 20, category: 'Drinks', image: cococolaImage, rating: 4.7 },
+  { id: 16, name: 'Maaza', description: 'Tropical mango drink', price: 20, category: 'Drinks', image: maazaImage, rating: 4.6 },
+  { id: 17, name: 'Sprite', description: 'Lemon-lime soft drink', price: 100, category: 'Drinks', image: spriteImage, rating: 4.8 },
 ];
 
 export default function Menu() {
   const [activeCategory, setActiveCategory] = useState('All');
+
+  useEffect(() => {
+    // Force scroll to top for all devices including mobile
+    const scrollToTop = () => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+      
+      // Additional mobile-specific scroll handling
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+    };
+
+    // Execute immediately and also after a short delay for mobile browsers
+    scrollToTop();
+    const timeoutId = setTimeout(scrollToTop, 100);
+    
+    // Clean up
+    return () => {
+      clearTimeout(timeoutId);
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'auto';
+      }
+    };
+  }, []);
 
   const filteredItems = activeCategory === 'All' 
     ? menuItems 
@@ -77,7 +110,7 @@ export default function Menu() {
       </section>
 
       {/* Category Tabs */}
-      <section className="py-8 sticky top-16 z-40 glass">
+      <section className="py-8 bg-secondary/50">
         <div className="container-custom">
           <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
             {categories.map((category) => (
@@ -132,10 +165,6 @@ export default function Menu() {
                   <p className="text-muted-foreground text-sm mb-4">{item.description}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-2xl font-bold text-primary">₹{item.price}</span>
-                    <button className="btn-gold py-2 px-4 text-sm flex items-center gap-2">
-                      <ShoppingCart size={16} />
-                      Add to Cart
-                    </button>
                   </div>
                 </div>
               </motion.div>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
 import { toast } from 'sonner';
@@ -10,6 +10,32 @@ export default function Contact() {
     phone: '',
     message: '',
   });
+
+  useEffect(() => {
+    // Force scroll to top for all devices including mobile
+    const scrollToTop = () => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+      
+      // Additional mobile-specific scroll handling
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+    };
+
+    // Execute immediately and also after a short delay for mobile browsers
+    scrollToTop();
+    const timeoutId = setTimeout(scrollToTop, 100);
+    
+    // Clean up
+    return () => {
+      clearTimeout(timeoutId);
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'auto';
+      }
+    };
+  }, []);
 
   const whatsappNumber = '919398442100';
   const floatingWhatsAppNumber = '919398442100';
@@ -217,7 +243,7 @@ export default function Contact() {
             className="glass-card overflow-hidden"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.168505642546!2d55.13519931500851!3d25.07756598395522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6caed0a88f5f%3A0x7b99382a2e8b9b0c!2sDubai%20Marina!5e0!3m2!1sen!2sae!4v1620000000000!5m2!1sen!2sae"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15263.7847957904!2d79.40835845!3d15.0913069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4b4b9ad17af387%3A0x9814fb1d68607123!2sIndian%20Food%20%26%20Arabic%20Biriyani!5e0!3m2!1sen!2sin!4v1707500000000!5m2!1sen!2sin"
               width="100%"
               height="450"
               style={{ border: 0 }}

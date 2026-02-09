@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { UtensilsCrossed, Truck, CalendarDays, PartyPopper, Home, Package, Send } from 'lucide-react';
 import { toast } from 'sonner';
@@ -46,6 +46,32 @@ export default function Services() {
     date: '',
     message: '',
   });
+
+  useEffect(() => {
+    // Force scroll to top for all devices including mobile
+    const scrollToTop = () => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+      
+      // Additional mobile-specific scroll handling
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+    };
+
+    // Execute immediately and also after a short delay for mobile browsers
+    scrollToTop();
+    const timeoutId = setTimeout(scrollToTop, 100);
+    
+    // Clean up
+    return () => {
+      clearTimeout(timeoutId);
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'auto';
+      }
+    };
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
